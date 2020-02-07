@@ -78,11 +78,11 @@ class Audio(Entity):
 
     @property
     def ready(self):
-        return 1 if self.clip and self.status > 0 else 0
+        return self.clip and self.status > 0
 
     @property
     def playing(self):
-        return 1 if self.clip and self.status == 2 else 0
+        return self.clip and self.status == 2
 
     @property
     def time(self):
